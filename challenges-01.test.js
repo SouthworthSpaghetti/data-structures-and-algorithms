@@ -41,7 +41,7 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  for(let i = 0; i < times; i++){
+  for (let i = 0; i < times; i++) {
     callback(arr, num);
   }
 
@@ -62,14 +62,14 @@ Return the modified array.
 
 const removeOne = (num, arr) => {
   // Solution code here...
-  if(num % 3 === 2){
+  if (num % 3 === 2) {
     arr.pop();
   }
 };
 
 const removeElements = (arr, callback) => {
   // Solution code here...
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     callback(arr[i], arr);
   }
   return arr;
@@ -108,9 +108,9 @@ const removeWithAnon = (arr) => {
   // Solution code here...
   arr.forEach(value => {
     // function(){
-      if (value % 3 === 2) {
-        arr.pop();
-      }
+    if (value % 3 === 2) {
+      arr.pop();
+    }
     // }
   })
   return arr;
@@ -145,7 +145,7 @@ const createList = (availableItems) => {
   // Solution code here...
   const list = [];
   availableItems.forEach(value => {
-    if(value.available === true){
+    if (value.available === true) {
       list.push(value.name);
     }
   })
@@ -168,6 +168,17 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const outputArray = [];
+  arr.forEach(value => {
+    if (value % 3 === 0 && value % 5 === 0) {
+      outputArray.push('Fizz Buzz');
+    } else if (value % 3 === 0) {
+      outputArray.push('Fizz');
+    } else if (value % 5 === 0) {
+      outputArray.push('Buzz');
+    } else (outputArray.push(value))
+  })
+  return outputArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
