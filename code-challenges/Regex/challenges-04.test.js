@@ -111,6 +111,13 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  let emptyResult = [];
+  let regex = /[aeiou]/gi;
+  if (str.replace(regex, '_')) {
+    return str.replace(regex, '_');
+  } else {
+    return emptyResult;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
