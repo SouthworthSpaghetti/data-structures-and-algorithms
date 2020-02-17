@@ -149,8 +149,8 @@ For example:
 const removeEvenValues = (arr) => {
   // Solution code here...
   // arr.forEach((data, i) => {
-    for(i = 0; i < arr.length; i++){
-    let x = data % 2;
+    for(let i = 0; i < arr.length; i++){
+    let x = arr[i] % 2;
     // return x === 0? arr.shift(data) : return;
     if(x == 0){
       //remove from array
@@ -179,6 +179,8 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  let x = str.length;
+  return str.splice(-x, numberOfCharacters);
 };
 
 
