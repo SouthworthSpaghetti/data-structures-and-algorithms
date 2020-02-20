@@ -175,7 +175,15 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
+  let newArr = arr.filter(i => !isNaN(i));
+  newArr = arr.filter(i => String(i) !== i);
+  console.log(newArr);
+  return newArr.map(j => intId(j));
 };
+
+const intId = function(x){
+  return x % 2 === 0 ? 'even' : 'odd';
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
