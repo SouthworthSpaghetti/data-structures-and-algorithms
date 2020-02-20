@@ -181,14 +181,18 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
-  let bob = arr.map(x => new Object(x));
+  let bob = arr.map(x => new object(x));
   return bob;
 };
 
-function Object(x){
-  this.name = x.stat.name;
-  this.total = x.effort + x.baseStat;
-  console.log(this);
+function object(x){
+  let constructor = {};
+  constructor['name'] = x.stat.name;
+  constructor['total'] = x.effort + x.baseStat;
+  return constructor;
+  // this.name = x.stat.name;
+  // this.total = x.effort + x.baseStat;
+  // console.log(JSON.this);
 }
 /* ------------------------------------------------------------------------------------------------
 TESTS
