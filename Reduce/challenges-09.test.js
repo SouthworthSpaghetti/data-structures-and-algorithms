@@ -96,7 +96,7 @@ const reversedString = (str) => {
   for(let i = 0; i < str.length; i++){
     newArr.push(str[str.length - i - 1]);
   }
-  console.log(newArr);
+  // console.log(newArr);
   return newArr.reduce((answerSoFar, data) => {
     // console.log(answerSoFar);
     answerSoFar = answerSoFar + data;
@@ -174,6 +174,11 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  return arr.reduce((bananas, data, index) => {
+    console.log(bananas);
+    bananas = (bananas + data)/2;
+    return bananas;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
