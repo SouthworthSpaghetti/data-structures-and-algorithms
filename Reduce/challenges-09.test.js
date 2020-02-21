@@ -175,7 +175,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 const calculateAverage = (arr) => {
   // Solution code here...
   let dataObj = arr.reduce((bananas, data, index) => {
-    console.log(bananas);
+    // console.log(bananas);
     // bananas = (bananas + data)/2;
     bananas.count = index + 1;
     bananas.sum = bananas.sum + data;
@@ -203,6 +203,13 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  return arr.reduce((prog, data) => {
+    if(isPrime(data)){
+      // console.log(prog);
+      prog = prog + 1;
+    }
+    return prog;
+  }, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -246,6 +253,14 @@ const snorlaxData = {
 
 const extractStat = (statName, arr) => {
   // Solution code here...
+  return arr.reduce((prog, data) => {
+    console.log("/./././", prog)
+    if(data.stat.name == statName){
+      console.log("*&*&*&*", prog);
+      prog = data;
+    }
+    return prog;
+  }, {})
 };
 
 /* ------------------------------------------------------------------------------------------------
