@@ -254,9 +254,9 @@ const snorlaxData = {
 const extractStat = (statName, arr) => {
   // Solution code here...
   return arr.reduce((prog, data) => {
-    console.log("/./././", prog)
+    // console.log("/./././", prog)
     if(data.stat.name == statName){
-      console.log("*&*&*&*", prog);
+      // console.log("*&*&*&*", prog);
       prog = data;
     }
     return prog;
@@ -275,8 +275,35 @@ Write a function named extractChildren that, given the array of characters from 
 
 const extractChildren = (arr) => {
   // Solution code here...
-};
+  return arr.reduce((prog, data) => {
+    console.log("*&*&&*", prog);
+    let newArr = [];
+    let childArr = [];
+    for(let i = 0; i < data.name.length; i++){
+      newArr.push(data.name[i]);
+    }
+    for (let i = 0; i < data.children.length; i++) {
+      childArr.push(data.name[i]);
+    }
+    // console.log("<><><><", newArr)
+    if(newArr.filter(i => i == 'a').length){
+      prog.push(data.name);
+    }
+    // console.log("/././", prog.name)
+      return prog;
+    }, [])
+  };
 
+  const newBUild = function(str){
+    let newArr = 
+  }
+  
+//   data.name.reduce((soFar, letter) => {
+//   if(letter == 'a'){
+//     soFar = data.name;
+//   }
+//   return soFar;
+// },''))
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
