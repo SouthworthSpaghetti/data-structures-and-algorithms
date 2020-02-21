@@ -92,18 +92,17 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  let xyz = str.charAt(str.length);
   let newArr = [];
   for(let i = 0; i < str.length; i++){
-    newArr.push(str[str.length - i + 1]);
+    newArr.push(str[str.length - i - 1]);
   }
   console.log(newArr);
   return newArr.reduce((answerSoFar, data) => {
-    console.log(answerSoFar);
+    // console.log(answerSoFar);
     answerSoFar = answerSoFar + data;
     // answerSoFar = str.charAt(str.length - index + 1);
     return answerSoFar;
-  }, ' ');
+  }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -157,6 +156,12 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  return arr.reduce((answerSoFar, data) => {
+    if(data.children){
+      answerSoFar = answerSoFar + data.children.length;
+    }
+    return answerSoFar;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
