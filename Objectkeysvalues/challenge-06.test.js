@@ -120,7 +120,26 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
-  console.log(Object.entries(arr));
+  let x = false;
+  // console.log(Object.entries(arr));
+  // console.log("/./././", Object.entries(arr)[0]);
+  Object.entries(arr).forEach(object => {
+    // console.log("*&*&*&*&", object.name)
+    // console.log("/./././", object[1].name)
+    // console.log("123456789", object.length)
+    if (object[1].name == character) {
+      // console.log("/./././.");
+
+      if (object[1].children.length) {
+        // console.log(",.,..,.,,.,.");
+        x = true;
+      }
+    }
+  })
+  return x;
+
+
+
     // console.log("?>?>?>")
 };
 
@@ -132,7 +151,24 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
-  
+  // name, spouse, children.length
+  let x = 0;
+  for (let [key, value] of Object.entries(arr)) {
+    x++;
+    // return value.spouse ? x++
+    // return value.children.length ? (x = x + value.children.length)
+    if(value.spouse){
+      x++;
+    }
+    if (value.children.length){
+      x = x + value.children.length;
+    }
+  }
+  return x;
+  // Object.entries(arr).forEach(object => {
+  //   x++;
+  //   if(object[1].spouse
+  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
