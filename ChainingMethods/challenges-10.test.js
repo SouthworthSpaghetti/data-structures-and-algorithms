@@ -58,7 +58,14 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  // Solution code here...Math.pow(2,
+  // let newArr = input.map(array => array.filter(data => Math.pow(2, data)).filter(value => value % 5 === 0))
+  let newArr = input.map(array => array.filter(data => String(data) !== data).filter(value => value % 5 === 0));
+  // let omgArr = newArr.map(array => array.filter(value => value = Math.pow(2, value)))
+  let omgArr = newArr.map(arr => arr.map(x => x = Math.pow(2, x)))
+  // console.log('/./././.', newArr)
+  return omgArr;
+  // ;value => value % 5 === 0
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,6 +132,17 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let newString = String(data.filter(array => array.gender === 'male' || array.gender === 'female').reduce((soFar, data) => soFar += `${data.name} and `, ''));
+  // let ogArr = [];
+  // for(let i = 0; i < newArr.length - 1; i++){
+  //   ogArr.push(newArr[i]);
+    
+  // }
+  // let ogString = newArr.reduce((soFar, data) => soFar += `${data.name} and `, '') ;
+  return newString.slice(0, newString.length - 5);
+  console.log(">:>:>:>:", newArr);
+  // // console.log("/././././", ogString[ogString.length-1]);
+  // console.log("*&*&*&*&*", newString);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,6 +152,8 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+  let newString = data.reduce((soFar, value) => soFar += value.map(sage => sage.filter(luna => luna )), '')
+  console.log(newString)
   // Solution code here...
 };
 
