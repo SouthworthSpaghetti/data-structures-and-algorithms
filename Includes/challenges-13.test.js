@@ -36,6 +36,8 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.map(phone => phone.substring(1, 4) + phone.substring(6, 9) + phone.substring(10, 14));
+  // return arr.map(phone => phone.reduce((soFar, value) => {soFar = value},''))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +50,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+ return str.every((value, index) => value, (index % 2 !== 0))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +61,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let newArr = arr.filter(value => value.includes(':)'));
+  return newArr.length === arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,6 +73,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 
 const findAnything = (arr, target) => {
   // Solution code here...
+  return arr.filter(value => value.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,6 +84,8 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   // Solution code here...
+  let newArr = arr.filter(value => value.includes(target));
+  return newArr.length == arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,6 +102,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 
 const unenrollBrook = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
